@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_iIx6cGGUEeWSzNhMPQmL1w" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_3d7TEGGUEeWSzNhMPQmL1w" name="Vehicle" isAbstract="true">
+    <ownedAttribute xmi:id="_iOcoIGGVEeWSzNhMPQmL1w" name="Speed">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UpPEwGGXEeWSzNhMPQmL1w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V-wGMGGXEeWSzNhMPQmL1w" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_vzxOUGGVEeWSzNhMPQmL1w" name="Color">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MFEHcGGbEeWdxuYoNkY1fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MFEHcWGbEeWdxuYoNkY1fg" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_JS07QWGZEeWdxuYoNkY1fg" name="color"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_sRQ7cGGWEeWSzNhMPQmL1w" name="turnLeft">
+      <ownedParameter xmi:id="_CFxJkGGXEeWSzNhMPQmL1w" name="Angle" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_hxHhAGGXEeWSzNhMPQmL1w" name="turnRight">
+      <ownedParameter xmi:id="_m_rQkGGXEeWSzNhMPQmL1w" name="Angle">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_33nwAGGVEeWSzNhMPQmL1w" name="MotorVehicle">
+    <generalization xmi:id="_mePM4GGWEeWSzNhMPQmL1w" general="_3d7TEGGUEeWSzNhMPQmL1w"/>
+    <ownedAttribute xmi:id="_VS6wYGGWEeWSzNhMPQmL1w" name="sizeOfEngine">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_e2uB4GGWEeWSzNhMPQmL1w" name="licensePlate">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u5x5AGGaEeWdxuYoNkY1fg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u5x5AWGaEeWdxuYoNkY1fg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1GahwGGXEeWSzNhMPQmL1w" name="Bicycle">
+    <generalization xmi:id="_D-LAMGGYEeWSzNhMPQmL1w" general="_3d7TEGGUEeWSzNhMPQmL1w"/>
+    <ownedAttribute xmi:id="_3tbnUGGXEeWSzNhMPQmL1w" name="ringBell"/>
+    <ownedAttribute xmi:id="_5gW9gGGXEeWSzNhMPQmL1w" name="numberOfWheels">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6cFekGGaEeWdxuYoNkY1fg" name="MotorBike">
+    <generalization xmi:id="_H-n2gGGbEeWdxuYoNkY1fg" general="_33nwAGGVEeWSzNhMPQmL1w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DwoMEGGbEeWdxuYoNkY1fg" name="Car">
+    <generalization xmi:id="_I3eKEGGbEeWdxuYoNkY1fg" general="_33nwAGGVEeWSzNhMPQmL1w"/>
+  </packagedElement>
+</uml:Model>
