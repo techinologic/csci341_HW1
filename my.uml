@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_iIx6cGGUEeWSzNhMPQmL1w" name="NewModel">
+  <packageImport xmi:id="_7w9HAGMfEeWfppHkC-hWvw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
   <packagedElement xmi:type="uml:Class" xmi:id="_3d7TEGGUEeWSzNhMPQmL1w" name="Vehicle" isAbstract="true">
     <ownedAttribute xmi:id="_iOcoIGGVEeWSzNhMPQmL1w" name="Speed">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UpPEwGGXEeWSzNhMPQmL1w" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V-wGMGGXEeWSzNhMPQmL1w" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_n-yFYGMREeWfppHkC-hWvw" value="0"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_vzxOUGGVEeWSzNhMPQmL1w" name="Color">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -24,27 +28,127 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_33nwAGGVEeWSzNhMPQmL1w" name="MotorVehicle">
+    <packageImport xmi:id="_Mv75AGMSEeWfppHkC-hWvw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
     <generalization xmi:id="_mePM4GGWEeWSzNhMPQmL1w" general="_3d7TEGGUEeWSzNhMPQmL1w"/>
     <ownedAttribute xmi:id="_VS6wYGGWEeWSzNhMPQmL1w" name="sizeOfEngine">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6F0h4GLSEeWfppHkC-hWvw" value="1"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_e2uB4GGWEeWSzNhMPQmL1w" name="licensePlate">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u5x5AGGaEeWdxuYoNkY1fg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u5x5AWGaEeWdxuYoNkY1fg" value="1"/>
     </ownedAttribute>
+    <ownedOperation xmi:id="_PTsPMGMSEeWfppHkC-hWvw" name="shiftGear"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1GahwGGXEeWSzNhMPQmL1w" name="Bicycle">
     <generalization xmi:id="_D-LAMGGYEeWSzNhMPQmL1w" general="_3d7TEGGUEeWSzNhMPQmL1w"/>
-    <ownedAttribute xmi:id="_3tbnUGGXEeWSzNhMPQmL1w" name="ringBell"/>
     <ownedAttribute xmi:id="_5gW9gGGXEeWSzNhMPQmL1w" name="numberOfWheels">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
+    <ownedOperation xmi:id="_31BAEGLWEeWfppHkC-hWvw" name="ringBell">
+      <ownedParameter xmi:id="_9tzYYGLWEeWfppHkC-hWvw" name="num">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_6cFekGGaEeWdxuYoNkY1fg" name="MotorBike">
     <generalization xmi:id="_H-n2gGGbEeWdxuYoNkY1fg" general="_33nwAGGVEeWSzNhMPQmL1w"/>
+    <ownedAttribute xmi:id="_MMMxEGLWEeWfppHkC-hWvw" name="hasSideCar">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MMMxEWLWEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MMMxEmLWEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_cuBvMGLXEeWfppHkC-hWvw" name="handleBarType">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cuBvMWLXEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cuBvMmLXEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7XgZ8GLXEeWfppHkC-hWvw" name="drive">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7XhBAGLXEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7XhBAWLXEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_DwoMEGGbEeWdxuYoNkY1fg" name="Car">
     <generalization xmi:id="_I3eKEGGbEeWdxuYoNkY1fg" general="_33nwAGGVEeWSzNhMPQmL1w"/>
+    <ownedAttribute xmi:id="_DTGJwGLTEeWfppHkC-hWvw" name="numberODoors">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DTP6wGLTEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DTP6wWLTEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_DMjAYGLUEeWfppHkC-hWvw" name="isLeftHandDrive">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DMjAYWLUEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DMjAYmLUEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Eq4xMGLVEeWfppHkC-hWvw" name="isConvertible">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Eq4xMWLVEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Eq4xMmLVEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EkmdAGMXEeWfppHkC-hWvw" name="Course">
+    <ownedAttribute xmi:id="_XmFw8GMXEeWfppHkC-hWvw" name="listOfStudents">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XmO64GMXEeWfppHkC-hWvw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XmO64WMXEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_bDrSIGMXEeWfppHkC-hWvw" name="ListOfAssignedLecturers">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bDrSIWMXEeWfppHkC-hWvw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bDrSImMXEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_MH8SoGMXEeWfppHkC-hWvw" name="addStudent">
+      <ownedParameter xmi:id="_oIHjYGMYEeWfppHkC-hWvw" name="student" type="_7NnDAGMXEeWfppHkC-hWvw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_NSFKgGMXEeWfppHkC-hWvw" name="removeStudent">
+      <ownedParameter xmi:id="_sv0HQGMYEeWfppHkC-hWvw" name="student" type="_7NnDAGMXEeWfppHkC-hWvw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_Pssy0GMXEeWfppHkC-hWvw" name="getListOfAssignedStudents"/>
+    <ownedOperation xmi:id="_jpYjsGMXEeWfppHkC-hWvw" name="assignTeacher">
+      <ownedParameter xmi:id="_knki4GMaEeWfppHkC-hWvw" name="teacher" type="_sBuusGMXEeWfppHkC-hWvw"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_sZSLsGMaEeWfppHkC-hWvw" name="getAssignedTeacher"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sBuusGMXEeWfppHkC-hWvw" name="Lecturer">
+    <generalization xmi:id="_pzSkYGMbEeWfppHkC-hWvw" general="_SDtRAGMYEeWfppHkC-hWvw"/>
+    <ownedAttribute xmi:id="_i3W0YGMYEeWfppHkC-hWvw" name="listOfTaughtCourses">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i3W0YWMYEeWfppHkC-hWvw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i3W0YmMYEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_yYljEGMXEeWfppHkC-hWvw" name="getTaughtCourses"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7NnDAGMXEeWfppHkC-hWvw" name="Student">
+    <generalization xmi:id="_qcAKMGMbEeWfppHkC-hWvw" general="_SDtRAGMYEeWfppHkC-hWvw"/>
+    <ownedAttribute xmi:id="_EvHcMGMdEeWfppHkC-hWvw" name="ListOfCourses">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EvHcMWMdEeWfppHkC-hWvw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EvHcMmMdEeWfppHkC-hWvw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_Qr-MkGMZEeWfppHkC-hWvw" name="getCourses"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_SDtRAGMYEeWfppHkC-hWvw" name="Person">
+    <ownedOperation xmi:id="_UUIbgGMYEeWfppHkC-hWvw" name="getName"/>
+    <ownedOperation xmi:id="_Xt3-gGMYEeWfppHkC-hWvw" name="getEmailAddress"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_V6LE4GMbEeWfppHkC-hWvw" name="taughtBy" memberEnd="_V6LE4WMbEeWfppHkC-hWvw _V6LE5GMbEeWfppHkC-hWvw" navigableOwnedEnd="_V6LE4WMbEeWfppHkC-hWvw _V6LE5GMbEeWfppHkC-hWvw">
+    <ownedEnd xmi:id="_V6LE4WMbEeWfppHkC-hWvw" name="lecturers" type="_sBuusGMXEeWfppHkC-hWvw" association="_V6LE4GMbEeWfppHkC-hWvw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V6LE4mMbEeWfppHkC-hWvw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V6LE42MbEeWfppHkC-hWvw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_V6LE5GMbEeWfppHkC-hWvw" name="courses" type="_EkmdAGMXEeWfppHkC-hWvw" association="_V6LE4GMbEeWfppHkC-hWvw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V6LE5WMbEeWfppHkC-hWvw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V6LE5mMbEeWfppHkC-hWvw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GkRnAGMdEeWfppHkC-hWvw" name="attends" memberEnd="_GkRnAWMdEeWfppHkC-hWvw _GkRnBGMdEeWfppHkC-hWvw" navigableOwnedEnd="_GkRnAWMdEeWfppHkC-hWvw _GkRnBGMdEeWfppHkC-hWvw">
+    <ownedEnd xmi:id="_GkRnAWMdEeWfppHkC-hWvw" name="students" type="_7NnDAGMXEeWfppHkC-hWvw" association="_GkRnAGMdEeWfppHkC-hWvw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GkRnAmMdEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GkRnA2MdEeWfppHkC-hWvw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_GkRnBGMdEeWfppHkC-hWvw" name="courses" type="_EkmdAGMXEeWfppHkC-hWvw" association="_GkRnAGMdEeWfppHkC-hWvw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GkRnBWMdEeWfppHkC-hWvw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GkRnBmMdEeWfppHkC-hWvw" value="*"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
